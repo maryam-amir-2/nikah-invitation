@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nikah Invitation</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Libre+Baskerville&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Libre Baskerville', serif;
+      background-color: #d7d7d7;
+      color: #333;
+      line-height: 1.6;
+
+      /* Graphical top and bottom borders */
+      position: relative;
+      padding-top: 80px;
+      padding-bottom: 80px;
+
+      background-repeat: no-repeat;
+      background-position: top center, bottom center;
+      background-size: 100% 70px, 100% 70px;
+      background-image:
+        url('data:image/svg+xml;utf8,<svg fill="%234a1f6a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100" preserveAspectRatio="none"><path d="M0 100 C 300 0 900 0 1200 100 L1200 0 L0 0 Z"/></svg>'),
+        url('data:image/svg+xml;utf8,<svg fill="%234a1f6a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100" preserveAspectRatio="none"><path d="M0 0 C 300 100 900 100 1200 0 L1200 100 L0 100 Z"/></svg>');
+    }
+    
+    section {
+      padding: 60px 20px;
+      text-align: center;
+      padding-top: 0px;
+    }
+
+    .bismillah {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2rem;
+      color: #5c2d91;
+      margin-bottom: 10px;
+    }
+
+    .verse {
+      font-style: bold;
+      font-size: 3rem;
+      color: #777777;
+      margin-bottom: 10px;
+    }
+
+    .names h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4.5rem;
+      color: #4a1f6a;
+      margin: 0px 0;
+      padding-top: 0px;
+    }
+
+    .names p {
+      font-size: 1.1rem;
+      padding-top: 0px;
+    }
+
+    .couple-img {
+      max-width: 90%;
+      height: auto;
+      margin-top: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .countdown-wrapper {
+      margin-top: 30px;
+      text-align: center;
+      font-family: 'Georgia', serif;
+      color: #5e3370;
+    }
+
+    #countdown {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      font-size: 18px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    #countdown span {
+      background: #c8bece;
+      padding: 10px 15px;
+      padding-bottom: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .divider {
+      font-size: 4rem;
+      margin: 10px 0;
+    }
+
+    .details {
+      background-color: #4A0072;
+    }
+
+    .details h3 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      margin-top: 3px;
+      color: #f4edff;
+    }
+
+    .details p {
+      font-size: 1.1rem;
+      color: #dbc7ed;
+    }
+
+    .dua {
+      font-size: 1rem;
+      margin-top: 30px;
+      color: #e0d7e7;
+    }
+
+    .footer {
+      background-color: #d0c9dc;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+      color: #110f0f;
+    }
+
+    @media (min-width: 768px) {
+      section {
+        padding: 80px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="intro">
+    <div class="bismillah">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
+    <div class="verse">“وَخَلَقْنَاكُمْ أَزْوَاجًا”</div>
+    <p>With the blessings of Allah (SWT), we joyfully invite you to the Nikah ceremony of</p>
+  </section>
+
+  <section class="names">
+    <h2>Imad Khan</h2>
+    <p>Son of Mohammad Nizamuddin Khan</p>
+    <div class="divider">💍</div>
+    <h2>Laiba Alam</h2>
+    <p>Daughter of Syed Parvez Alam</p>
+    <img src="nikah.png" alt="Couple Image" class="couple-img">
+  </section>
+
+  <div class="countdown-wrapper">
+    <h3>Countdown to Nikah</h3>
+    <div id="countdown">
+      <span><strong id="days">00</strong> Days</span>
+      <span><strong id="hours">00</strong> Hours</span>
+      <span><strong id="minutes">00</strong> Minutes</span>
+      <span><strong id="seconds">00</strong> Seconds</span>
+    </div>
+  </div>
+
+  <section class="details">
+    <h3>Nikah Ceremony</h3>
+    <p><strong>Date:</strong> Sunday, 14th July 2025</p>
+    <p><strong>Time:</strong> After Asr Prayer (~5:30 PM)</p>
+    <p><strong>Venue:</strong> Noor e Mehfil banquet</p>
+    <div class="dua">Please grace us with your presence and duas on this blessed occasion.</div>
+  </section>
+
+  <section class="footer">
+    — Family of the Bride & Groom —
+  </section>
+
+  <script>
+    // Set the date of the Nikah
+    const nikahDate = new Date("June 9, 2025 16:30:00").getTime(); // Customize this date/time
+
+    const timer = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = nikahDate - now;
+
+      if (distance < 0) {
+        clearInterval(timer);
+        document.getElementById("countdown").innerHTML = "It's Nikah Time!";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").textContent = String(days).padStart(2, '0');
+      document.getElementById("hours").textContent = String(hours).padStart(2, '0');
+      document.getElementById("minutes").textContent = String(minutes).padStart(2, '0');
+      document.getElementById("seconds").textContent = String(seconds).padStart(2, '0');
+    }, 1000);
+  </script>
+
+</body>
+</html>
